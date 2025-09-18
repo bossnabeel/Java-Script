@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #232323;
+      }
+      .container {
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 600px;
+        background-color: #b56e167d;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Local TIme</h1>
+        <h3 class="time">00:00:00 AM</h3>
+      </div>
+    </div>
+  </body>
+  <script>
+    setInterval(() => {
+      document.querySelector(".time").innerText =
+        new Date().toLocaleTimeString();
+    }, 1000);
+  </script>
+</html>

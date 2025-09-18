@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Generator</title>
+    <style>
+      body {
+        background-color: #232323;
+      }
+      .color {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color"></div>
+  </body>
+  <script>
+    setInterval(() => {
+      let box = document.querySelector(".color");
+      let rand = "#";
+      let hex = "1234567890ABCDEF";
+      for (let i = 0; i < 6; i++) {
+        rand += hex[Math.floor(Math.random() * 16)];
+      }
+      box.style.backgroundColor = rand;
+      box.innerHTML = rand;
+    }, 1000);
+  </script>
+</html>
