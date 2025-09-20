@@ -1,18 +1,26 @@
 
 let Add = document.querySelector("#Add-button")
 let list = document.querySelector("#list")
-
-Add.addEventListener("click", () => {
+let addtolist = () => {
     let input_task = document.querySelector("#input-task")
     if (input_task.value.trim() !== "") {
         let li = document.createElement("li")
         let button = document.createElement("button")
         button.innerText = "X"
         button.className = "remove"
-        li.innerText = input_task.value
+        let text=document.createTextNode(input_task.value+" - ")
+        li.append(text,button)
         list.append(li)
-        li.append(button)
         input_task.value = ""
+    }
+}
+Add.addEventListener("click", () => {
+    addtolist()
+});
+let input_task = document.querySelector("#input-task")
+input_task.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        addtolist()
     }
 });
 list.addEventListener("click", (e) => {
