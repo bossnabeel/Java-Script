@@ -1,5 +1,4 @@
 const basicOp = (opt, num, num2) => {
-    let ans = 0;
     switch (opt) {
         case "+":
             return num + num2;
