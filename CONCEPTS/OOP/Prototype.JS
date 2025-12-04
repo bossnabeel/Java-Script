@@ -23,7 +23,7 @@ Object.defineProperty(Number.prototype, "square", {
 })
 console.log((4).square);
 
-inheritance
+//inheritance
 
 function Student(names, grade, age, roll) {
     // __proto__ use for inherit
