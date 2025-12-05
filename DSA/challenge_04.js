@@ -46,22 +46,30 @@ Constraints:
 import { Queue } from "./07_queque.js";
 
 export function findFirstUniqueDinosaurAge(ages) {
+
     const queue = new Queue();
     const ageFrequency = new Map();
 
     for (const age of ages) {
+
         queue.enqueue(age);
-        if(!queue.has(age)){
-            ageFrequency.set(age, 1);
-        }
-        else{
-            ageFrequency.set(age,ageFrequency.get(age) + 1);
+
+        if (!ageFrequency.has(age)) {
+
+            ageFrequency.set(age, 1)
+
+        } else {
+
+            ageFrequency.set(age, ageFrequency.get(age) + 1);
+
         }
     }
 
-    while(!queue.isEmpty()){
+    while (!queue.isEmpty()) {
         let age = queue.dequeue();
-        if(ageFrequency.get(age) === 1){
+
+        if (ageFrequency.get(age) === 1) {
+
             return age;
         }
     }
