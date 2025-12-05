@@ -1,2 +1,2 @@
-## PRACTICING OF JAVASCRIPT & DSA.
+## <p style="text-align:center"> >PRACTICING OF JAVASCRIPT & DSA.</p>
 
