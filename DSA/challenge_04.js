@@ -45,7 +45,7 @@ Constraints:
 
 import { Queue } from "./07_queque.js";
 
-export function findFirstUniqueDinosaurAge(ages) {
+function findFirstUniqueDinosaurAge(ages) {
 
     const queue = new Queue();
     const ageFrequency = new Map();
