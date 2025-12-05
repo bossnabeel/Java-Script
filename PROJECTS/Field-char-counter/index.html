@@ -8,7 +8,13 @@
   <body>
     <textarea id="textbox" rows="4" cols="30"></textarea>
     <p id="charcount">Characters: 0</p>
-    <br/>
+    <br />
   </body>
-  <script src="index.js"></script>
+  <script>
+    let textbox = document.querySelector("#textbox");
+    let charcount = document.querySelector("#charcount");
+    textbox.addEventListener("input", () => {
+      charcount.innerHTML = `Characters: ${textbox.value.length}`;
+    });
+  </script>
 </html>
