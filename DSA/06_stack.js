@@ -7,6 +7,7 @@ export class Stack {
         // Push the element to the top/end of the stack.
         this.stack.length = this.stack.length + 1
         this.stack[this.stack.length - 1] = element;
+        return true;
     }
 
     pop() {
@@ -37,3 +38,10 @@ export class Stack {
         return this.stack.length === 0
     }
 }
+
+// let stack = new Stack();
+
+// console.log(stack.isEmpty())
+// console.log(stack.push(3))
+// console.log(stack.peek())
+// console.log(stack.pop())
