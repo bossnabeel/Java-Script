@@ -21,7 +21,7 @@ export class Stack {
 
     peek() {
         // Return the top element from the stack without removing it.
-        if (this.stack.length === 0) {
+        if (this.isEmpty()) {
             throw new Error("Stack is empty.")
         }
         return this.stack[this.stack.length - 1];
@@ -34,7 +34,6 @@ export class Stack {
 
     isEmpty() {
         // Return whether the stack is empty or not.
-        if (this.stack.length === 0) return true;
-        else return false;
+        return this.stack.length === 0
     }
 }
