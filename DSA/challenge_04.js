@@ -43,7 +43,7 @@ Constraints:
 
  */
 
-import { Queue } from "./07_queque.js";
+import { Queue } from "./07_queue.js";
 
 function findFirstUniqueDinosaurAge(ages) {
 
