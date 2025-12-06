@@ -57,7 +57,7 @@ class LinkedList {
 
 let list = new LinkedList()
 for (let i = 0; i < 10; i++) {
-    list.push(i + 1);
+    list.push(Math.floor(Math.random()*100));
 }
 list.print()
 list.shift();
@@ -68,4 +68,3 @@ list.append(10);
 list.print();
 list.push(1);
 list.print();
-
