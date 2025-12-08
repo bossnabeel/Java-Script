@@ -50,9 +50,9 @@ function bubbleSort(arr) {
     return arr;
 }
 
-// =================================================================
+// ===================
 // 2. TESTING HARNESS
-// =================================================================
+// ===================
 
 /**
  * N size random number array generator
@@ -84,19 +84,19 @@ function runTest(algorithm, size) {
     return (end - start).toFixed(4);
 }
 
-// =================================================================
+// =============
 // 3. EXECUTION
-// =================================================================
+// =============
 
-const arraySize = 100000; // 👈 100 Thousand Elements
+const arraySize = 100000; //  100k els
 
 console.log(`--- Starting Performance Test with N = ${arraySize} ---`);
 
-// Test 1: Merge Sort (O(N log N))
+// Merge Sort (O(N log N))
 const timeMerge = runTest(mergeSort, arraySize);
 console.log(`Merge Sort (O(N log N)) Time: ${timeMerge} ms`);
 
-// Test 2: Bubble Sort (O(N^2))
+// Bubble Sort (O(N^2))
 const timeBubble = runTest(bubbleSort, arraySize);
 console.log(`Bubble Sort (O(N^2)) Time: ${timeBubble} ms`);
 
